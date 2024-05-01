@@ -1,4 +1,4 @@
-import { useState, useRef,useEffect } from "react";
+import { useState, useRef, useEffect} from "react";
 
 import Header from "./Header";
 import Player from "./Player";
@@ -63,10 +63,28 @@ const App = () => {
       ])
       nextPlayerId.current += 1
   }
+    const[winners, setWinner] = useState([])
+
+    useEffect(() => {
+      let scores = players.map(player => player.score)
+      let highestScore = Math.max(...scores)
+      
+      players.forEach(player => {
+          if (player.score >= highestScore && player.score !== 0) {
+            highestScore = player.score;
+            setWinner(winners => [...winners, player.name])
+          } else { setWinner(winners => winners.filter(winner => winner !== player.name))
+          }
+        })
+    }
+    , [players])
   
-  
+    // useEffect(() => {
+    //   console.log(winners)
+    // }, [winners])
 
   return (
+    
     <div className="scoreboard">
       <Header
         title="Scoreboard"
@@ -77,6 +95,7 @@ const App = () => {
       {players.map(player =>
         <Player
           name={player.name}
+          classNameWinner={winners.includes(player.name)? 'is-high-score' : null}
           score={player.score}
           id={player.id}
           key={player.id.toString()}
