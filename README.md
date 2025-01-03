@@ -1,5 +1,6 @@
 # 🏆 Scoreboard App
-This is a simple yet functional Scoreboard App that allows you to manage a list of players, track their points, and even use a built-in stopwatch to time games or activities. It’s an excellent tool for any small team game or challenge where scoring and timing are needed.
+This is a simple yet functional Scoreboard App that allows you to manage a list of players, track their points, and even use a built-in stopwatch to time games or activities. It’s an excellent tool for any small team game or challenge where scoring and timing are needed.<br>
+Check it out live here: [Scoreboard App](https://magdamie.github.io/scoreboard/)
 
 ## 📸 Preview
 ![](score-board.png) 
