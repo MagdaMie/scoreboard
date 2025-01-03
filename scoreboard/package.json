@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://MagdaMie.github.io/scoreboard",
+  "homepage": "https://MagdaMie.github.io/scoreboard/scoreboard",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
